@@ -16,11 +16,18 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes]
 "CurrentTheme"="C:\\Windows\\resources\\Themes\\dark.theme"
+"ThemeMRU"="C:\\Windows\\resources\\Themes\\dark.theme;C:\\Windows\\resources\\Themes\\aero.theme;"
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+;"EnableTransparency"=dword:00000000;Visual Effects - disable transparency effects (VDI)
 "ThemeChangesDesktopIcons"=dword:00000001;Themes - Windows themes change icons
 "ThemeChangesMousePointers"=dword:00000001;Themes - Windows themes change cursors
 "WallpaperSetFromTheme"=dword:00000001;Themes - Windows themes change wallpaper
 
-;[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
-;"EnableTransparency"=dword:00000000;Visual Effects - disable transparency effects (VDI)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+;"AlwaysHibernateThumbnails"=dword:00000000;Visual Effects - Disable saving taskbar thumbnail previews (VDI)
+"ColorPrevalence"=dword:00000000;Visual Effects - Don't show accent color on the following surfaces: Title bars and window borders (DWM: ColorPrevalence)
+"EnableWindowColorization"=dword:00000000;Visual Effects - Disable colored title bars (DWM: EnableWindowColorization)
+"AccentColor"=dword:FFBF407F;Format: AABBGGRR #FF7F40BF
+"ColorizationColor"=dword:C47F40BF;Format: AARRGGBB #C47F40BF
+"ColorizationAfterglow"=dword:C47F40BF;Format: AARRGGBB #C47F40BF
