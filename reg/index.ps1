@@ -20,3 +20,6 @@ $SPIF_SENDCHANGE = 0x02
 Start-Process explorer.exe
 
 Remove-Item -LiteralPath ".\index.reg"
+
+$Creds = Get-Credential
+Restart-Computer -Credential $Creds -Force
