@@ -38,3 +38,6 @@ $SPIF_UPDATEINIFILE = 0x01
 $SPIF_SENDCHANGE = 0x02
 [User32]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, [IntPtr]::Zero, $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE)
 Start-Process explorer.exe
+
+$Creds = Get-Credential
+Restart-Computer -Credential $Creds -Force
