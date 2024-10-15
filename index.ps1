@@ -8,6 +8,8 @@ public class User32 {
 }
 "@
 
+$GetCreds = $false
+
 taskkill /f /im explorer.exe 2>&1> $null
 
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "DontPrettyPath" -Value 0 -Type dword
@@ -39,5 +41,7 @@ $SPIF_SENDCHANGE = 0x02
 [User32]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, [IntPtr]::Zero, $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE)
 Start-Process explorer.exe
 
-$Creds = Get-Credential
+if($GetCreds) {
+	$Creds = Get-Credential
+}
 Restart-Computer -Credential $Creds -Force
