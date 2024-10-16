@@ -5,11 +5,11 @@
 			"Value": "0x00000000"
 		},
 		"TileWallpaper": {
-			"Type": "SZ",
+			"Type": "MULTISTRING",
 			"Value": "0"
 		},
 		"WallPaper": {
-			"Type": "SZ",
+			"Type": "MULTISTRING",
 			"Value": "%SystemRoot%\\web\\wallpaper\\Windows\\img19.jpg"
 		},
 		"WallpaperOriginX": {
@@ -21,11 +21,11 @@
 			"Value": "0x00000000"
 		},
 		"WallpaperStyle": {
-			"Type": "SZ",
+			"Type": "MULTISTRING",
 			"Value": "10"
 		},
 		"WindowArrangementActive": {
-			"Type": "SZ",
+			"Type": "MULTISTRING",
 			"Value": "1"
 		}
 	},
@@ -87,7 +87,7 @@
 			"Value": "0x00000001"
 		},
 		"CurrentTheme": {
-			"Type": "SZ",
+			"Type": "MULTISTRING",
 			"Value": "C:\\Windows\\resources\\Themes\\dark.theme"
 		},
 		"ThemeChangesDesktopIcons": {
@@ -99,7 +99,7 @@
 			"Value": "0x00000001"
 		},
 		"ThemeMRU": {
-			"Type": "SZ",
+			"Type": "MULTISTRING",
 			"Value": "C:\\Windows\\resources\\Themes\\dark.theme;C:\\Windows\\resources\\Themes\\aero.theme;"
 		},
 		"WallpaperSetFromTheme": {
