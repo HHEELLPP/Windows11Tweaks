@@ -1,185 +1,185 @@
 {
 	"HKCU:\\Control Panel\\Desktop": {
 		"AutoColorization": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"TileWallpaper": {
-			"Type": "REG_SZ",
+			"Type": "SZ",
 			"Value": "0"
 		},
 		"WallPaper": {
-			"Type": "REG_SZ",
+			"Type": "SZ",
 			"Value": "%SystemRoot%\\web\\wallpaper\\Windows\\img19.jpg"
 		},
 		"WallpaperOriginX": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"WallpaperOriginY": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"WallpaperStyle": {
-			"Type": "REG_SZ",
+			"Type": "SZ",
 			"Value": "10"
 		},
 		"WindowArrangementActive": {
-			"Type": "REG_SZ",
+			"Type": "SZ",
 			"Value": "1"
 		}
 	},
 	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Accent": {
 		"AccentColorMenu": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0xffd55495"
 		},
 		"AccentPalette": {
-			"Type": "REG_BINARY",
+			"Type": "BINARY",
 			"Value": "ec,c6,f7,00,d2,a5,ed,00,a6,6a,dc,00,95,54,d5,00,74,31,c9,00,4e,25,99,00,21,0f,6a,00,88,17,98,00"
 		},
 		"StartColorMenu": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0xffc93174"
 		}
 	},
 	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced": {
 		"DontPrettyPath": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"Hidden": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"HideFileExt": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"NavPaneExpandToCurrentFolder": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"NavPaneShowAllFolders": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"SeparateProcess": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"ServerAdminUI": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"ShowSuperHidden": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"TaskbarAl": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		}
 	},
 	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes": {
 		"ColorSetFromTheme": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"CurrentTheme": {
-			"Type": "REG_SZ",
+			"Type": "SZ",
 			"Value": "C:\\Windows\\resources\\Themes\\dark.theme"
 		},
 		"ThemeChangesDesktopIcons": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"ThemeChangesMousePointers": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"ThemeMRU": {
-			"Type": "REG_SZ",
+			"Type": "SZ",
 			"Value": "C:\\Windows\\resources\\Themes\\dark.theme;C:\\Windows\\resources\\Themes\\aero.theme;"
 		},
 		"WallpaperSetFromTheme": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		}
 	},
 	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize": {
 		"AppsUseLightTheme": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"ColorPrevalence": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"EnableTransparency": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"SystemUsesLightTheme": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"ThemeChangesDesktopIcons": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"ThemeChangesMousePointers": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"WallpaperSetFromTheme": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		}
 	},
 	"HKCU:\\Software\\Microsoft\\Windows\\DWM": {
 		"AccentColor": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0xffbf407f"
 		},
 		"ColorPrevalence": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000000"
 		},
 		"ColorizationAfterglow": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0xc47f40bf"
 		},
 		"ColorizationAfterglowBalance": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x0000000a"
 		},
 		"ColorizationBlurBalance": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"ColorizationColor": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0xc47f40bf"
 		},
 		"ColorizationColorBalance": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000059"
 		},
 		"ColorizationGlassAttribute": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"Composition": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"EnableAeroPeek": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		},
 		"EnableWindowColorization": {
-			"Type": "REG_DWORD",
+			"Type": "DWORD",
 			"Value": "0x00000001"
 		}
 	}
