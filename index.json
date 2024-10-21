@@ -10,7 +10,7 @@
 		},
 		"WallPaper": {
 			"Type": "MULTISTRING",
-			"Value": "C:\\Windows\\web\\wallpaper\\Windows\\img0.jpg"
+			"Value": "C:\\Windows\\web\\wallpaper\\Windows\\img19.jpg"
 		},
 		"WallpaperOriginX": {
 			"Type": "DWORD",
@@ -134,7 +134,7 @@
 		},
 		"WallpaperSetFromTheme": {
 			"Type": "DWORD",
-			"Value": "0x00000001"
+			"Value": "0x00000000"
 		}
 	},
 	"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\DWM": {
