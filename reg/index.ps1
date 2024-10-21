@@ -27,7 +27,7 @@ foreach ($aa in $aadadf.PSObject.Properties) {
 $SPI_SETDESKWALLPAPER = 0x0014
 $SPIF_UPDATEINIFILE = 0x01
 $SPIF_SENDCHANGE = 0x02
-[User32]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, "$env:SystemRoot\web\wallpaper\Windows\img19.jpg", $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE)
+[User32]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, [IntPtr]::Zero, $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE)
 Start-Process explorer.exe
 
 Remove-Item -LiteralPath ".\index.json"
