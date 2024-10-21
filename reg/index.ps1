@@ -7,13 +7,10 @@ public class User32 {
 	public static extern bool SystemParametersInfo(uint action, uint param, IntPtr vparam, uint init);
 }
 "@
-Invoke-WebRequest  `
--Uri (ConvertFrom-Json (Invoke-WebRequest -Uri "https://api.github.com/repos/HHEELLPP/Windows11Tweaks/contents/index.json").Content).download_url `
--OutFile ".\index.json"
+$aadadf = ConvertFrom-Json (Invoke-WebRequest  -Uri (ConvertFrom-Json (Invoke-WebRequest -Uri "https://api.github.com/repos/HHEELLPP/Windows11Tweaks/contents/index.json").Content).download_url)
 
 taskkill /f /im explorer.exe 2>&1> $null
 
-$aadadf = Get-Content ".\index.json" | ConvertFrom-Json
 foreach ($aa in $aadadf.PSObject.Properties) {
 	$Path = "Registry::$($aa.Name)"
 	foreach ($bb in $aa.Value.PSObject.Properties) {
@@ -29,8 +26,6 @@ $SPIF_UPDATEINIFILE = 0x01
 $SPIF_SENDCHANGE = 0x02
 [User32]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, [IntPtr]::Zero, $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE)
 Start-Process explorer.exe
-
-Remove-Item -LiteralPath ".\index.json"
 
 $Creds = Get-Credential
 Restart-Computer -Credential $Creds -Force
