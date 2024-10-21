@@ -1,5 +1,5 @@
 {
-	"HKCU:\\Control Panel\\Desktop": {
+	"HKEY_CURRENT_USER\\Control Panel\\Desktop": {
 		"AutoColorization": {
 			"Type": "DWORD",
 			"Value": "0x00000000"
@@ -29,7 +29,7 @@
 			"Value": "1"
 		}
 	},
-	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Accent": {
+	"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Accent": {
 		"AccentColorMenu": {
 			"Type": "DWORD",
 			"Value": "0xffd55495"
@@ -43,7 +43,7 @@
 			"Value": "0xffc93174"
 		}
 	},
-	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced": {
+	"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced": {
 		"DontPrettyPath": {
 			"Type": "DWORD",
 			"Value": "0x00000000"
@@ -81,7 +81,7 @@
 			"Value": "0x00000000"
 		}
 	},
-	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes": {
+	"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes": {
 		"ColorSetFromTheme": {
 			"Type": "DWORD",
 			"Value": "0x00000001"
@@ -107,7 +107,7 @@
 			"Value": "0x00000001"
 		}
 	},
-	"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize": {
+	"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize": {
 		"AppsUseLightTheme": {
 			"Type": "DWORD",
 			"Value": "0x00000000"
@@ -137,7 +137,7 @@
 			"Value": "0x00000001"
 		}
 	},
-	"HKCU:\\Software\\Microsoft\\Windows\\DWM": {
+	"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\DWM": {
 		"AccentColor": {
 			"Type": "DWORD",
 			"Value": "0xffbf407f"
