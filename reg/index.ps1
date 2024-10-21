@@ -15,7 +15,7 @@ taskkill /f /im explorer.exe 2>&1> $null
 
 $aadadf = Get-Content ".\index.json" | ConvertFrom-Json -Depth 5
 foreach ($aa in $aadadf.PSObject.Properties) {
-	$Path = $aa.Name
+	$Path = "Registry::$($aa.Name)"
 	foreach ($bb in $aa.Value.PSObject.Properties) {
 		$Name = $bb.Name
 		$Value = $bb.Value.Value
