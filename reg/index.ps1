@@ -13,7 +13,7 @@ Invoke-WebRequest  `
 
 taskkill /f /im explorer.exe 2>&1> $null
 
-$aadadf = Get-Content ".\index.json" | ConvertFrom-Json -Depth 5
+$aadadf = Get-Content ".\index.json" | ConvertFrom-Json
 foreach ($aa in $aadadf.PSObject.Properties) {
 	$Path = "Registry::$($aa.Name)"
 	foreach ($bb in $aa.Value.PSObject.Properties) {
