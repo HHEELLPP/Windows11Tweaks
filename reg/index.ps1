@@ -29,3 +29,9 @@ Start-Process explorer.exe
 
 $Creds = Get-Credential
 Restart-Computer -Credential $Creds -Force
+# HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Accent: [
+# 		"AccentPalette": {
+# 			"Type": "BINARY",
+# 			"Value": "ec,c6,f7,00,d2,a5,ed,00,a6,6a,dc,00,95,54,d5,00,74,31,c9,00,4e,25,99,00,21,0f,6a,00,88,17,98,00"
+# 		},
+#   ]
