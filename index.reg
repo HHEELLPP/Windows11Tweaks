@@ -10,13 +10,12 @@ Windows Registry Editor Version 5.00
 "AutoColorization"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent]
-"AccentPalette"=hex:ec,c6,f7,00,d2,a5,ed,00,a6,6a,dc,00,95,54,d5,00,74,31,c9,\
-  00,4e,25,99,00,21,0f,6a,00,88,17,98,00
+"AccentPalette"=hex:ec,c6,f7,00,d2,a5,ed,00,a6,6a,dc,00,95,54,d5,00,74,31,c9,00,4e,25,99,00,21,0f,6a,00,88,17,98,00
 "StartColorMenu"=dword:ffc93174
 "AccentColorMenu"=dword:ffd55495
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"DontPrettyPath"=dword:00000000;Explorer - Don't change the upper/lower case of filenames
+"DontPrettyPath"=dword:00000001;Explorer - Don't change the upper/lower case of filenames
 "Hidden"=dword:00000001;Explorer - Show hidden files, folders and drives
 "HideFileExt"=dword:00000000;Explorer - Don't hide extensions for known file types
 "NavPaneExpandToCurrentFolder"=dword:00000001;Navigation Pane - Automatically expand to current folder
@@ -25,7 +24,7 @@ Windows Registry Editor Version 5.00
 "ServerAdminUI"=dword:00000001;Explorer - Enable Server Admin UI (?)
 ;"SharingWizardOn"=dword:00000000;Explorer - Disable 'Use Sharing Wizard'
 ;"ShowStatusBar"=dword:00000000;Explorer - Hide the status bar (if you use Classic Shell or Open Shell's status bar)
-"ShowSuperHidden"=dword:00000001;Explorer - Display protected operating system files
+"ShowSuperHidden"=dword:00000000;Explorer - Display protected operating system files
 "ShowSyncProviderNotifications"=dword:00000001;Explorer - Don't show notifications/adverts (OneDrive & new feature alerts)
 "TaskbarAl"=dword:00000000;Taskbar - Change alignment to left (0) or center (1) (Windows 11)
 

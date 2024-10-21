@@ -12,12 +12,21 @@ $aadadf = ConvertFrom-Json (Invoke-WebRequest  -Uri (ConvertFrom-Json (Invoke-We
 taskkill /f /im explorer.exe 2>&1> $null
 
 foreach ($aa in $aadadf.PSObject.Properties) {
-	$Path = "Registry::$($aa.Name)"
+	$Path = "Registry::"+$aa.Name
 	foreach ($bb in $aa.Value.PSObject.Properties) {
 		$Name = $bb.Name
 		$Value = $bb.Value.Value
 		$Type = $bb.Value.Type
-		Set-ItemProperty -Path $Path -Name $Name -Value $Value -Type $Type
+		# Write-Output $Type
+		if($Type -ieq "BINARY") {
+			Write-Output $Value
+			if($Value.ToLower().StartsWith("hex:")) {
+				[byte[]]$Value = $Value.Substring(4)
+				Write-Output $Value
+				exit
+			}
+		}
+		# Set-ItemProperty -Path $Path -Name $Name -Value $Value -Type $Type
 	}
 }
 
@@ -27,8 +36,8 @@ $SPIF_SENDCHANGE = 0x02
 [User32]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, [IntPtr]::Zero, $SPIF_UPDATEINIFILE -bor $SPIF_SENDCHANGE)
 Start-Process explorer.exe
 
-$Creds = Get-Credential
-Restart-Computer -Credential $Creds -Force
+# $Creds = Get-Credential
+# Restart-Computer -Credential $Creds -Force
 # HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Accent: [
 # 		"AccentPalette": {
 # 			"Type": "BINARY",
