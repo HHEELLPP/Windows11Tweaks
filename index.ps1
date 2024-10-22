@@ -6,6 +6,22 @@ function New-RegistryItem {
 		New-Item $LiteralPath -Force -ea SilentlyContinue
 	}
 }
+function Get-FirstPath {
+	param(
+		[string[]]$LiteralPath
+	)
+	$Rees = Test-Path -LiteralPath $LiteralPath
+	for($i = 0; $i -lt $LiteralPath.Length; $i++) {
+		if(Test-Path -LiteralPath $LiteralPath[$i]) {
+			return $LiteralPath[$i]
+		}
+	}
+}
+
+Get-FirstPath -LiteralPath @(
+	"$env:SystemRoot\web\wallpaper\Windows\img0.jpg"
+	"$env:SystemRoot\web\wallpaper\Windows\img19.jpg"
+)
 
 taskkill /f /im explorer.exe 2>&1> $null
 
@@ -15,15 +31,13 @@ New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOrig
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOriginY' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperStyle' -Value '10' -PropertyType String -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WindowArrangementActive' -Value '1' -PropertyType String -Force -ea SilentlyContinue;
-$WallPaperPath = "$env:SystemRoot\web\wallpaper\Windows\img19.jpg"
-if((Test-Path -LiteralPath $WallPaperPath) -ne $True) {
-	$WallPaperPath = "$env:SystemRoot\web\wallpaper\Windows\img0.jpg"
-	if((Test-Path -LiteralPath $WallPaperPath) -ne $True) {
-		$WallPaperPath = $null
-	}
-}
+
+$WallPaperPath = Get-FirstPath -LiteralPath @(
+	"$env:SystemRoot\web\wallpaper\Windows\img0.jpg"
+	"$env:SystemRoot\web\wallpaper\Windows\img19.jpg"
+)
 if($WallPaperPath -ne $null) {
-	New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value '%SystemRoot%\web\wallpaper\Windows\img19.jpg' -PropertyType String -Force -ea SilentlyContinue;
+	New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value $WallPaperPath -PropertyType String -Force -ea SilentlyContinue;
 }
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'AutoColorization' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 
