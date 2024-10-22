@@ -10,7 +10,7 @@
 		},
 		"WallPaper": {
 			"Type": "MULTISTRING",
-			"Value": "c:\\windows\\web\\wallpaper\\windows\\img19.jpg"
+			"Value": "C:\\Windows\\web\\wallpaper\\windows\\img19.jpg"
 		},
 		"WallpaperOriginX": {
 			"Type": "DWORD",
