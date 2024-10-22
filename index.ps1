@@ -9,7 +9,7 @@ New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOrig
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOriginY' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperStyle' -Value '10' -PropertyType String -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WindowArrangementActive' -Value '1' -PropertyType String -Force -ea SilentlyContinue;
-New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value 'C:\Windows\web\wallpaper\Windows\img19.jpg' -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value '%SystemRoot%\web\wallpaper\Windows\img19.jpg' -PropertyType String -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'AutoColorization' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent' -Name 'AccentPalette' -Value ([byte[]](0xec,0xc6,0xf7,0x00,0xd2,0xa5,0xed,0x00,0xa6,0x6a,0xdc,0x00,0x95,0x54,0xd5,0x00,0x74,0x31,0xc9,0x00,0x4e,0x25,0x99,0x00,0x21,0x0f,0x6a,0x00,0x88,0x17,0x98,0x00)) -PropertyType Binary -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent' -Name 'StartColorMenu' -Value -3591820 -PropertyType DWord -Force -ea SilentlyContinue;
