@@ -15,7 +15,16 @@ New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOrig
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOriginY' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperStyle' -Value '10' -PropertyType String -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WindowArrangementActive' -Value '1' -PropertyType String -Force -ea SilentlyContinue;
-New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value '%SystemRoot%\web\wallpaper\Windows\img19.jpg' -PropertyType String -Force -ea SilentlyContinue;
+$WallPaperPath = "$env:SystemRoot\web\wallpaper\Windows\img19.jpg"
+if((Test-Path -LiteralPath $WallPaperPath) -ne $True) {
+	$WallPaperPath = "$env:SystemRoot\web\wallpaper\Windows\img0.jpg"
+	if((Test-Path -LiteralPath $WallPaperPath) -ne $True) {
+		$WallPaperPath = $null
+	}
+}
+if($WallPaperPath -ne $null) {
+	New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value '%SystemRoot%\web\wallpaper\Windows\img19.jpg' -PropertyType String -Force -ea SilentlyContinue;
+}
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'AutoColorization' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 
 New-RegistryItem -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent'
