@@ -10,7 +10,7 @@
 		},
 		"WallPaper": {
 			"Type": "MULTISTRING",
-			"Value": "C:\\Windows\\web\\wallpaper\\Windows\\img19.jpg"
+			"Value": "c:\\windows\\web\\wallpaper\\windows\\img19.jpg"
 		},
 		"WallpaperOriginX": {
 			"Type": "DWORD",
@@ -36,7 +36,7 @@
 		},
 		"AccentPalette": {
 			"Type": "BINARY",
-			"Value": "hex:ec,c6,f7,00,d2,a5,ed,00,a6,6a,dc,00,95,54,d5,00,74,31,c9,00,4e,25,99,00,21,0f,6a,00,88,17,98,00"
+			"Value": "236,198,247,0,210,165,237,0,166,106,220,0,149,84,213,0,116,49,201,0,78,37,153,0,33,15,106,0,136,23,152,0"
 		},
 		"StartColorMenu": {
 			"Type": "DWORD",
