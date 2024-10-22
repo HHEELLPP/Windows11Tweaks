@@ -15,18 +15,18 @@ Windows Registry Editor Version 5.00
 "AccentColorMenu"=dword:ffd55495
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
-"DontPrettyPath"=dword:00000001;Explorer - Don't change the upper/lower case of filenames
-"Hidden"=dword:00000001;Explorer - Show hidden files, folders and drives
-"HideFileExt"=dword:00000000;Explorer - Don't hide extensions for known file types
-"NavPaneExpandToCurrentFolder"=dword:00000001;Navigation Pane - Automatically expand to current folder
-"NavPaneShowAllFolders"=dword:00000001;Navigation Pane - Show all folders in Explorer including Recycle Bin, Desktop, Control Panel
-"SeparateProcess"=dword:00000000;Explorer - Don't launch folder windows in a separate process (separate explorer.exe Shell/File Explorer)
-"ServerAdminUI"=dword:00000001;Explorer - Enable Server Admin UI (?)
-;"SharingWizardOn"=dword:00000000;Explorer - Disable 'Use Sharing Wizard'
-;"ShowStatusBar"=dword:00000000;Explorer - Hide the status bar (if you use Classic Shell or Open Shell's status bar)
-"ShowSuperHidden"=dword:00000000;Explorer - Display protected operating system files
-"ShowSyncProviderNotifications"=dword:00000001;Explorer - Don't show notifications/adverts (OneDrive & new feature alerts)
-"TaskbarAl"=dword:00000000;Taskbar - Change alignment to left (0) or center (1) (Windows 11)
+"DontPrettyPath"=dword:00000001
+"Hidden"=dword:00000001
+"HideFileExt"=dword:00000000
+"NavPaneExpandToCurrentFolder"=dword:00000001
+"NavPaneShowAllFolders"=dword:00000001
+"SeparateProcess"=dword:00000000
+"ServerAdminUI"=dword:00000001
+;"SharingWizardOn"=dword:00000000
+;"ShowStatusBar"=dword:00000000
+"ShowSuperHidden"=dword:00000000
+"ShowSyncProviderNotifications"=dword:00000001
+"TaskbarAl"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes]
 "ThemeChangesDesktopIcons"=dword:00000001
@@ -38,24 +38,24 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
 "ColorPrevalence"=dword:00000000
-"EnableTransparency"=dword:00000000;Visual Effects - disable transparency effects (VDI)
+"EnableTransparency"=dword:00000000
 "AppsUseLightTheme"=dword:00000000
 "SystemUsesLightTheme"=dword:00000000
-"ThemeChangesDesktopIcons"=dword:00000001;Themes - Windows themes change icons
-"ThemeChangesMousePointers"=dword:00000001;Themes - Windows themes change cursors
-"WallpaperSetFromTheme"=dword:00000001;Themes - Windows themes change wallpaper
+"ThemeChangesDesktopIcons"=dword:00000001
+"ThemeChangesMousePointers"=dword:00000001
+"WallpaperSetFromTheme"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
-;"AlwaysHibernateThumbnails"=dword:00000000;Visual Effects - Disable saving taskbar thumbnail previews (VDI)
+;"AlwaysHibernateThumbnails"=dword:00000000
 "Composition"=dword:00000001
-"ColorizationColor"=dword:c47f40bf;Format: AARRGGBB #C47F40BF
+"ColorizationColor"=dword:c47f40bf
 "ColorizationColorBalance"=dword:00000059
-"ColorizationAfterglow"=dword:c47f40bf;Format: AARRGGBB #C47F40BF
+"ColorizationAfterglow"=dword:c47f40bf
 "ColorizationAfterglowBalance"=dword:0000000a
 "ColorizationBlurBalance"=dword:00000001
-"EnableWindowColorization"=dword:00000001;Visual Effects - Enable colored title bars (DWM: EnableWindowColorization)
+"EnableWindowColorization"=dword:00000001
 "ColorizationGlassAttribute"=dword:00000001
-"AccentColor"=dword:ffbf407f;Format: AABBGGRR #FF7F40BF
-"ColorPrevalence"=dword:00000000;Visual Effects - Don't show accent color on the following surfaces: Title bars and window borders (DWM: ColorPrevalence)
+"AccentColor"=dword:ffbf407f
+"ColorPrevalence"=dword:00000000
 "EnableAeroPeek"=dword:00000001
 "UseDpiScaling"=dword:00000000

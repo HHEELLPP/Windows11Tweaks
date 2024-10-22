@@ -1,129 +1,55 @@
-Function reg2ps1 {
+if((Test-Path -LiteralPath "HKCU:\Control Panel\Desktop") -ne $true) {  New-Item "HKCU:\Control Panel\Desktop" -force -ea SilentlyContinue };
+if((Test-Path -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent") -ne $true) {  New-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent" -force -ea SilentlyContinue };
+if((Test-Path -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced") -ne $true) {  New-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -force -ea SilentlyContinue };
+if((Test-Path -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes") -ne $true) {  New-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes" -force -ea SilentlyContinue };
+if((Test-Path -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize") -ne $true) {  New-Item "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" -force -ea SilentlyContinue };
+if((Test-Path -LiteralPath "HKCU:\Software\Microsoft\Windows\DWM") -ne $true) {  New-Item "HKCU:\Software\Microsoft\Windows\DWM" -force -ea SilentlyContinue };
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'TileWallpaper' -Value '0' -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOriginX' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOriginY' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperStyle' -Value '10' -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WindowArrangementActive' -Value '1' -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value '%SystemRoot%\web\wallpaper\Windows\img19.jpg' -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'AutoColorization' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent' -Name 'AccentPalette' -Value ([byte[]](0xec,0xc6,0xf7,0x00,0xd2,0xa5,0xed,0x00,0xa6,0x6a,0xdc,0x00,0x95,0x54,0xd5,0x00,0x74,0x31,0xc9,0x00,0x4e,0x25,0x99,0x00,0x21,0x0f,0x6a,0x00,0x88,0x17,0x98,0x00)) -PropertyType Binary -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent' -Name 'StartColorMenu' -Value -3591820 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Accent' -Name 'AccentColorMenu' -Value -2796395 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'DontPrettyPath' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'Hidden' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'HideFileExt' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'NavPaneExpandToCurrentFolder' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'NavPaneShowAllFolders' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'SeparateProcess' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'ServerAdminUI' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
 
-	[CmdLetBinding()]
-	Param(
-		[Parameter(ValueFromPipeline = $true, Mandatory = $true)]
-		[Alias("FullName")]
-		[string]$path,
-		$Encoding = "utf8"
-	)
+# "ShowStatusBar"=dword:00000000
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'ShowSuperHidden' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'ShowSyncProviderNotifications' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'TaskbarAl' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes' -Name 'ThemeChangesDesktopIcons' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes' -Name 'ThemeChangesMousePointers' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes' -Name 'WallpaperSetFromTheme' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes' -Name 'ColorSetFromTheme' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes' -Name 'CurrentTheme' -Value 'C:\Windows\resources\Themes\dark.theme' -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes' -Name 'ThemeMRU' -Value 'C:\Windows\resources\Themes\dark.theme;C:\Windows\resources\Themes\aero.theme;' -PropertyType String -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name 'ColorPrevalence' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name 'EnableTransparency' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name 'AppsUseLightTheme' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name 'SystemUsesLightTheme' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name 'ThemeChangesDesktopIcons' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name 'ThemeChangesMousePointers' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize' -Name 'WallpaperSetFromTheme' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
 
-	Begin {
-		$hive = @{
-			"HKEY_CLASSES_ROOT"   = "HKCR:"
-			"HKEY_CURRENT_USER"   = "HKCU:"
-			"HKEY_LOCAL_MACHINE"  = "HKLM:"
-			"HKEY_USERS"          = "HKU:"
-			"HKEY_CURRENT_CONFIG" = "HKCC:"
-		}
-		[system.boolean]$isfolder = $false
-		$addedpath = @()
-	}
-	Process {
-		switch (Test-Path $path -PathType container) {
-			$true { $files = (Get-ChildItem -Path $path -Recurse -Force -File -Filter "*.reg").fullname; $isfolder = $true }
-			$false { if ($path.endswith(".reg")) { $files = $path } }
-		}
-		foreach ($File in $Files) {
-			$Commands = @()
-			[string]$text = $nul
-			$FileContent = Get-Content $File | Where-Object { ![string]::IsNullOrWhiteSpace($_) } | ForEach-Object { $_.Trim() }
-			$joinedlines = @()
-			for ($i = 0; $i -lt $FileContent.count; $i++) {
-				if ($FileContent[$i].EndsWith("\")) {
-					$text = $text + ($FileContent[$i] -replace "\\").trim()
-				}
-				else {
-					$joinedlines += $text + $FileContent[$i]
-					[string]$text = $nul
-				}
-			}
-
-			foreach ($joinedline in $joinedlines) {
-				if ($joinedline -match '\[' -and $joinedline -match '\]' -and $joinedline -match 'HKEY') {
-					$key = $joinedline -replace '\[|\]'
-					switch ($key.StartsWith("-HKEY")) {
-						$true {
-							$key = $key.substring(1, $key.length - 1)
-							$hivename = $key.split('\')[0]
-							$key = "`"" + ($key -replace $hivename, $hive.$hivename) + "`""
-							$Commands += 'Remove-Item -Path {0} -Force -Recurse' -f $key
-						}
-						$false {
-							$hivename = $key.split('\')[0]
-							$key = "`"" + ($key -replace $hivename, $hive.$hivename) + "`""
-							if ($addedpath -notcontains $key) {
-								$Commands += 'New-Item -Path {0} -ErrorAction SilentlyContinue | Out-Null' -f $key
-								$addedpath += $key
-							}
-						}
-					}
-				}
-				elseif ($joinedline -match "`"([^`"=]+)`"=") {
-					[System.Boolean]$delete = $false
-					$name = ($joinedline | Select-String -Pattern "`"([^`"=]+)`"").matches.value | Select-Object -First 1
-					switch ($joinedline) {
-						{ $joinedline -match "=-" } { $commands += $Commands += 'Remove-ItemProperty -Path {0} -Name {1} -Force' -f $key, $Name; $delete = $true }
-						{ $joinedline -match '"="' } {
-							$type = "string"
-							$value = $joinedline -replace "`"([^`"=]+)`"="
-						}
-						{ $joinedline -match "dword" } {
-							$type = "dword"
-							$value = $joinedline -replace "`"([^`"=]+)`"=dword:"
-							$value = "0x" + $value
-						}
-						{ $joinedline -match "qword" } {
-							$type = "qword"
-							$value = $joinedline -replace "`"([^`"=]+)`"=qword:"
-							$value = "0x" + $value
-						}
-						{ $joinedline -match "hex(\([2,7,b]\))?:" } {
-							$value = ($joinedline -replace "`"[^`"=]+`"=hex(\([2,7,b]\))?:").split(",")
-							$hextype = ($joinedline | Select-String -Pattern "hex(\([2,7,b]\))?").matches.value
-							switch ($hextype) {
-								{ $hextype -eq 'hex(2)' -or $hextype -eq 'hex(7)' } {
-									$value = for ($i = 0; $i -lt $value.count; $i += 2) {
-										switch ($hextype) {
-											'hex(2)' { if ($value[$i] -ne '00') { [string][char][int]('0x' + $value[$i]) } }
-											'hex(7)' { if ($value[$i] -ne '00') { [string][char][int]('0x' + $value[$i]) } else { "\0" } }
-										}
-									}
-									$value = $value -join ""
-									switch ($hextype) {
-										'hex(2)' { $type = "expandstring" }
-										'hex(7)' { $type = "multistring" }
-									}
-								}
-								'hex(b)' {
-									$type = "qword"
-									$value = for ($i = $value.count - 1; $i -ge 0; $i--) { $value[$i] }
-									$value = '0x' + ($value -join "").trimstart('0')
-								}
-								'hex' {
-									$type = "binary"
-									$value = '0x' + ($value -join "")
-								}
-							}
-						}
-					}
-					if ($delete -eq $false) { $commands += 'Set-ItemProperty -Path {0} -Name {1} -Type {2} -Value {3}' -f $key, $name, $type, $value }
-				}
-				elseif ($joinedline -match "@=") {
-					$name = '"(Default)"'; $type = 'string'; $value = $joinedline -replace '@='
-					$commands += 'Set-ItemProperty -Path {0} -Name {1} -Type {2} -Value {3}' -f $key, $name, $type, $value
-				}
-
-			}
-			$parent = Split-Path $file -Parent
-			$filename = [System.IO.Path]::GetFileNameWithoutExtension($file)
-			$Commands | Out-File -FilePath "${parent}\${filename}_reg.ps1" -Encoding $encoding
-		}
-		if ($isfolder -eq $true) {
-			$allcommands = (Get-ChildItem -Path $path -Recurse -Force -File -Filter "*_reg.ps1").fullname | Where-Object { $_ -notmatch "allcommands_reg" } | ForEach-Object { Get-Content $_ }
-			$allcommands | Out-File -FilePath "${path}\allcommands_reg.ps1" -Encoding $encoding
-		}
-	}
-}
-$path = Read-Host "input path"
-reg2ps1 $path
+# "AlwaysHibernateThumbnails"=dword:00000000
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'Composition' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'ColorizationColor' -Value -998293313 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'ColorizationColorBalance' -Value 89 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'ColorizationAfterglow' -Value -998293313 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'ColorizationAfterglowBalance' -Value 10 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'ColorizationBlurBalance' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'EnableWindowColorization' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'ColorizationGlassAttribute' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'AccentColor' -Value -4243329 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'ColorPrevalence' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'EnableAeroPeek' -Value 1 -PropertyType DWord -Force -ea SilentlyContinue;
+New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'UseDpiScaling' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
