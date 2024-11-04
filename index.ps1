@@ -18,11 +18,6 @@ function Get-FirstPath {
 	}
 }
 
-Get-FirstPath -LiteralPath @(
-	"$env:SystemRoot\web\wallpaper\Windows\img0.jpg"
-	"$env:SystemRoot\web\wallpaper\Windows\img19.jpg"
-)
-
 taskkill /f /im explorer.exe 2>&1> $null
 
 New-RegistryItem -LiteralPath 'HKCU:\Control Panel\Desktop'
@@ -32,9 +27,12 @@ New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperOrig
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallpaperStyle' -Value '10' -PropertyType String -Force -ea SilentlyContinue;
 New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WindowArrangementActive' -Value '1' -PropertyType String -Force -ea SilentlyContinue;
 
+New-Item -Path "U:\themes" -ItemType "directory" -Force
+New-Item -Path "U:\themes\wallpapers" -ItemType "directory" -Force
+Copy-Item -Path "$env:SystemRoot\web\wallpaper\Windows\*" -Destination "U:\themes\wallpapers" -Recurse
 $WallPaperPath = Get-FirstPath -LiteralPath @(
-	"$env:SystemRoot\web\wallpaper\Windows\img0.jpg"
-	"$env:SystemRoot\web\wallpaper\Windows\img19.jpg"
+	"U:\themes\wallpapers\img19.jpg"
+	"U:\themes\wallpapers\img0.jpg"
 )
 if($WallPaperPath -ne $null) {
 	New-ItemProperty -LiteralPath 'HKCU:\Control Panel\Desktop' -Name 'WallPaper' -Value $WallPaperPath -PropertyType String -Force -ea SilentlyContinue;
