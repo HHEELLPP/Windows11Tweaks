@@ -91,4 +91,4 @@ Start-Process explorer.exe
 
 'Windows ' + [System.Environment]::OSVersion.Version.Major
 
-Pause
+$null = $host.UI.RawUI.ReadKey(“NoEcho,IncludeKeyDown”)
