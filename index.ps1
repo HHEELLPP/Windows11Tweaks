@@ -90,3 +90,5 @@ New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'UseD
 Start-Process explorer.exe
 
 'Windows ' + [System.Environment]::OSVersion.Version.Major
+
+Pause
