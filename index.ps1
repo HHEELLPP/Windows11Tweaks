@@ -88,3 +88,5 @@ New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'Enab
 New-ItemProperty -LiteralPath 'HKCU:\Software\Microsoft\Windows\DWM' -Name 'UseDpiScaling' -Value 0 -PropertyType DWord -Force -ea SilentlyContinue;
 
 Start-Process explorer.exe
+
+'Windows ' + [System.Environment]::OSVersion.Version.Major
