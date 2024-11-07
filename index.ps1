@@ -133,6 +133,8 @@ New-ItemProperty -LiteralPath "Registry::HKEY_USERS\$UserId\Control Panel\Intern
 
 Start-Process explorer.exe
 
+$Sumn = Get-WmiObject Win32_OperatingSystem
 'Windows ' + [System.Environment]::OSVersion.Version.Major
 'AKA.'
-(Get-WmiObject -class Win32_OperatingSystem).Caption
+'Bit: ' + $Sumn.OSArchitecture
+'Caption: ' + $Sumn.Caption
