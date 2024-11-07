@@ -134,3 +134,5 @@ New-ItemProperty -LiteralPath "Registry::HKEY_USERS\$UserId\Control Panel\Intern
 Start-Process explorer.exe
 
 'Windows ' + [System.Environment]::OSVersion.Version.Major
+'AKA.'
+(Get-WmiObject -class Win32_OperatingSystem).Caption
