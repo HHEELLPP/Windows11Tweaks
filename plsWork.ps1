@@ -1,7 +1,7 @@
 $UserId = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
 New-Item -Path 'U:\themes\wallpapers' -ItemType 'directory' -Force
-if((Test-Path -LiteralPath "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -PathType 'Leaf')-and(-not (Test-Path -LiteralPath 'U:\themes\wallpapers\img19.jpg' -PathType 'Leaf'))){Copy-Item -Path "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -Destination 'U:\themes\wallpapers\img19.jpg'}
+if((Test-Path -LiteralPath "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -PathType 'Leaf')-and(-not(Test-Path -LiteralPath 'U:\themes\wallpapers\img19.jpg' -PathType 'Leaf'))){Copy-Item -Path "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -Destination 'U:\themes\wallpapers\img19.jpg'}
 $Result=@{
 	'HKEY_CURRENT_USER\Control Panel\Desktop'=@{
 		'TileWallpaper'=@{
