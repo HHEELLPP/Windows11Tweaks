@@ -382,4 +382,5 @@ Write-Host 'Windows ', [System.Environment]::OSVersion.Version.Major
 Write-Host 'AKA.'
 #>
 $a = Get-WmiObject Win32_OperatingSystem
-Write-Host $a.Caption,$a.OSArchitecture
+$a.Caption
+$a.OSArchitecture
