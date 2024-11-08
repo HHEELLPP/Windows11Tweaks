@@ -371,13 +371,20 @@ try {
 	foreach($LiteralPath in $Result.Keys) {
 		foreach($Name in $Result.$LiteralPath.Keys) {
 			$Result.$LiteralPath.$Name
-			if((Test-Path -LiteralPath "Registry::$LiteralPath") -ne $true){New-Item $LiteralPath -Force <#-ErrorAction 'SilentlyContinue'#>}
+			if((Test-Path -LiteralPath "Registry::$LiteralPath") -ne $true){New-Item $LiteralPath -Force}
 			New-ItemProperty `
 			-LiteralPath "Registry::$LiteralPath" `
 			-Name $Name `
 			-Value $Result.$LiteralPath.$Name.Value `
 			-PropertyType $Result.$LiteralPath.$Name.PropertyType `
-			-Force #-ErrorAction 'SilentlyContinue'
+			-Force
 		}
 	}
 } finally {Start-Process explorer.exe}
+
+<#
+Write-Host 'Windows ', [System.Environment]::OSVersion.Version.Major
+Write-Host 'AKA.'
+#>
+$Sumn = Get-WmiObject Win32_OperatingSystem
+Write-Host $Sumn.Caption, $Sumn.OSArchitecture
