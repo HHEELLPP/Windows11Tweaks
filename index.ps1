@@ -109,9 +109,6 @@ try {
 	New-ItemProperty -LiteralPath "Registry::HKEY_USERS\$UserId\Control Panel\International" -Name 'iTime' -Value '0' -PropertyType 'String' -Force -ea SilentlyContinue
 } finally {Start-Process explorer.exe}
 
-<#
-Write-Host 'Windows ', [System.Environment]::OSVersion.Version.Major
-Write-Host 'AKA.'
-#>
 $a = Get-WmiObject Win32_OperatingSystem
-Write-Host $a.Caption,$a.OSArchitecture
+$a.Caption
+$a.OSArchitecture
