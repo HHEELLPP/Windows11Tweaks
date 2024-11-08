@@ -112,3 +112,5 @@ try {
 $a = Get-WmiObject Win32_OperatingSystem
 $a.Caption
 $a.OSArchitecture
+
+PauseProgram
