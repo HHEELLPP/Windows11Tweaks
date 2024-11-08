@@ -380,3 +380,6 @@ try {
 $a = Get-WmiObject Win32_OperatingSystem
 $a.Caption
 $a.OSArchitecture
+
+$Host.UI.Write('Press Enter to continue...: ')
+$null=$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
