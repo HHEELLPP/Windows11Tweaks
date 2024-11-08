@@ -372,12 +372,7 @@ try {
 		foreach($Name in $Result.$LiteralPath.Keys) {
 			$Result.$LiteralPath.$Name
 			if((Test-Path -LiteralPath "Registry::$LiteralPath") -ne $true){New-Item $LiteralPath -Force}
-			New-ItemProperty `
-			-LiteralPath "Registry::$LiteralPath" `
-			-Name $Name `
-			-Value $Result.$LiteralPath.$Name.Value `
-			-PropertyType $Result.$LiteralPath.$Name.PropertyType `
-			-Force
+			New-ItemProperty -LiteralPath "Registry::$LiteralPath" -Name $Name -Value $Result.$LiteralPath.$Name.Value -PropertyType $Result.$LiteralPath.$Name.PropertyType -Force
 		}
 	}
 } finally {Start-Process explorer.exe}
