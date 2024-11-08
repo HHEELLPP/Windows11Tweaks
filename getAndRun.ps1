@@ -1,1 +1,1 @@
-Invoke-Expression (Invoke-WebRequest (Invoke-WebRequest 'https://api.github.com/repos/HHEELLPP/Windows11Tweaks/contents/plsWork.psm1' | ConvertFrom-Json).download_url).Content
+PowerShell.exe -NoExit -WindowStyle "Minimized" -Command "Invoke-Expression (Invoke-WebRequest (Invoke-WebRequest 'https://api.github.com/repos/HHEELLPP/Windows11Tweaks/contents/plsWork.psm1' | ConvertFrom-Json).download_url).Content"
