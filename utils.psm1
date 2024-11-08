@@ -17,6 +17,6 @@ function Get-FirstPath {
 	}
 }
 function PauseProgram {
-	$Host.UI.Write('Press Enter to continue...: ');
+	$Host.UI.Write('Press Enter to continue...: ')
 	$null=$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 }
