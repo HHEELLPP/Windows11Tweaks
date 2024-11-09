@@ -1,7 +1,9 @@
+Invoke-Expression (Invoke-WebRequest (Invoke-WebRequest 'https://api.github.com/repos/HHEELLPP/Windows11Tweaks/contents/utils.psm1'|ConvertFrom-Json).download_url)
+
 $UserId = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
 New-Item -Path 'U:\themes\wallpapers' -ItemType 'directory' -Force
-if((Test-Path -LiteralPath "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -PathType 'Leaf')-and(-not(Test-Path -LiteralPath 'U:\themes\wallpapers\img19.jpg' -PathType 'Leaf'))){Copy-Item -Path "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -Destination 'U:\themes\wallpapers\img19.jpg'}
+if((Test-Path -LiteralPath "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -PathType 'Leaf')-and((Test-Path -LiteralPath 'U:\themes\wallpapers\img19.jpg' -PathType 'Leaf')-ne$true)){Copy-Item -Path "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -Destination 'U:\themes\wallpapers\img19.jpg'}
 $Result=@{
 	'HKEY_CURRENT_USER\Control Panel\Desktop'=@{
 		'TileWallpaper'=@{
@@ -381,5 +383,4 @@ $a = Get-WmiObject Win32_OperatingSystem
 $a.Caption
 $a.OSArchitecture
 
-$Host.UI.Write('Press Enter to continue...: ')
-$null=$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+Stop-Program

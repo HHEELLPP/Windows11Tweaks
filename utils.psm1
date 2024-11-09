@@ -1,22 +1,23 @@
 function New-RegistryItem {
-	param(
-		[string]$LiteralPath
-	)
+	[CmdletBinding()]
+	param([Parameter(Mandatory=$true)][string]$LiteralPath)
 	if((Test-Path -LiteralPath $LiteralPath) -ne $true) {
 		New-Item $LiteralPath -Force -ea SilentlyContinue
 	}
 }
 function Get-FirstPath {
-	param(
-		[string[]]$LiteralPath
-	)
+	[CmdletBinding()]
+	param([Parameter(Mandatory=$true)][string[]]$LiteralPath)
 	for($i = 0; $i -lt $LiteralPath.Length; $i++) {
 		if(Test-Path -LiteralPath $LiteralPath[$i]) {
 			return $LiteralPath[$i]
 		}
 	}
 }
-function PauseProgram {
-	$Host.UI.Write('Press Enter to continue...: ')
-	$null=$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+function Stop-Program {
+	[CmdletBinding()]
+	param()
+	$Host.UI.Write('Press any key to continue . . . ')#'Press Enter to continue...: '
+	$Host.UI.RawUI.ReadKey(0b0110)|Out-Null
+	$Host.UI.WriteLine()
 }
