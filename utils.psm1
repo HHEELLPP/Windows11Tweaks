@@ -17,7 +17,7 @@ function Get-FirstPath {
 function Stop-Program {
 	[CmdletBinding()]
 	param()
-	$Host.UI.Write('Press any key to continue . . . ')#'Press Enter to continue...: '
-	$Host.UI.RawUI.ReadKey(0b0110)|Out-Null
+	$Host.UI.Write('Press any key to continue . . . ')
+	$Host.UI.RawUI.ReadKey(6)|Out-Null
 	$Host.UI.WriteLine()
 }
