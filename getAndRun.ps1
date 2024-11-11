@@ -9,6 +9,4 @@ if($PSVersionTable.PSEdition -ne 'Core') {
 	pwsh.exe -File $PSCommandPath
 }
 'Tada'
-$Host.UI.Write('Press any key to continue . . . ')
-$null = $Host.UI.RawUI.ReadKey(6)
-$Host.UI.WriteLine()
+Stop-Program
