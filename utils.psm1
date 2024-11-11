@@ -27,16 +27,19 @@ function Get-PowerShellEdition {
 	}
 }
 function Test-CommandExists {
-	param($command)
+	param(
+		$command
+		[switch]$Invert
+	)
 	$oldPreference = $ErrorActionPreference
 	$ErrorActionPreference = ‘stop’
 	try {
 		if(Get-Command $command) {
-			return $true
+			return -not $Invert
 		}
 	} catch {
 		Write-Host “$command does not exist”
-		return $false
+		return $Invert
 	} finally {
 		$ErrorActionPreference = $oldPreference
 	}
