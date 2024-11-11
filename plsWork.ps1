@@ -247,7 +247,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sTimeFormat'=@{
-			'Value'='h:mm:ss tt'
+			'Value'='HH:mm:ss'
 			'PropertyType'='String'
 		}
 		'sList'=@{
@@ -323,7 +323,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sShortTime'=@{
-			'Value'='h:mm tt'
+			'Value'='HH:mm'
 			'PropertyType'='String'
 		}
 		'sDecimal'=@{
