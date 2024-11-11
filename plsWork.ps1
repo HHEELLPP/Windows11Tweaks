@@ -275,7 +275,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sLongDate'=@{
-			'Value'='dddd, MMMM d, yyyy'
+			'Value'='yyyy MMMM d dddd'
 			'PropertyType'='String'
 		}
 		'sTime'=@{
@@ -359,7 +359,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sNativeDigits'=@{
-			'Value'='abcdefghij'
+			'Value'='0123456789'
 			'PropertyType'='String'
 		}
 		'iTime'=@{
