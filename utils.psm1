@@ -19,3 +19,10 @@ function Stop-Program {
 	$null = $Host.UI.RawUI.ReadKey(6)
 	$Host.UI.WriteLine()
 }
+function Get-PowerShellEdition {
+	if($PSVersionTable.PSEdition -eq 'Core') {
+		'pwsh'
+	} else {
+		'PowerShell'
+	}
+}
