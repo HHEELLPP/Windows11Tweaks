@@ -379,8 +379,6 @@ try {
 	}
 } finally {Start-Process explorer.exe}
 
-$a = Get-WmiObject Win32_OperatingSystem
-$a.Caption
-$a.OSArchitecture
+$a = Get-WmiObject Win32_OperatingSystem; $a.Caption; $a.OSArchitecture
 
 Stop-Program
