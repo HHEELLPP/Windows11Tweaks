@@ -1,4 +1,4 @@
-Invoke-Expression (Invoke-WebRequest (Invoke-WebRequest 'https://api.github.com/repos/HHEELLPP/Windows11Tweaks/contents/utils.psm1'|ConvertFrom-Json).download_url)
+Invoke-Expression (Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/utils.psm1')
 
 taskkill /f /im explorer.exe 2>&1> $null
 try {
