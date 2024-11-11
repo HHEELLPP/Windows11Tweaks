@@ -6,7 +6,7 @@ if($PSVersionTable.PSEdition -ne 'Core') {
 	if(-not (Test-CommandExists pwsh.exe)) {
 		winget.exe install --id Microsoft.PowerShell --source winget --scope user --exact --accept-source-agreements --accept-package-agreements
 	}
-	pwsh.exe -File $PSCommandPath
+	pwsh.exe -c $MyInvocation.MyCommand.ScriptBlock
 }
 'Tada'
 Stop-Program
