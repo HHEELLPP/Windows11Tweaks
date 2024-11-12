@@ -16,7 +16,7 @@ function Get-FirstPath {
 }
 function Stop-Program {
 	$Host.UI.Write('Press any key to continue . . . ')
-	$null = $Host.UI.RawUI.ReadKey(6)
+	$null = $Host.UI.RawUI.ReadKey(0b0110)
 	$Host.UI.WriteLine()
 }
 function Get-PowerShellEdition {
