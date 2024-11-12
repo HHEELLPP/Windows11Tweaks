@@ -1,4 +1,4 @@
-Invoke-Expression (Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/utils.psm1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/utils.psm1'|Invoke-Expression
 
 $UserId = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
