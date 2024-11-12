@@ -27,6 +27,7 @@ function Get-PowerShellEdition {
 	}
 }
 function Test-CommandExists {
+	[CmdletBinding()]
 	param(
 		$command,
 		[switch]$Invert
