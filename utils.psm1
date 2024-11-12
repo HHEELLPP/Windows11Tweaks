@@ -20,6 +20,8 @@ function Stop-Program {
 	$Host.UI.WriteLine()
 }
 function Get-PowerShellEdition {
+	[CmdletBinding()]
+	param()
 	if($PSVersionTable.PSEdition -eq 'Core') {
 		'pwsh'
 	} else {
@@ -27,6 +29,7 @@ function Get-PowerShellEdition {
 	}
 }
 function Test-CommandExists {
+	[CmdletBinding()]
 	param(
 		$command
 		[switch]$Invert
