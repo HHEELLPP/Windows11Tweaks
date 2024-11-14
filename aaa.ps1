@@ -12,16 +12,16 @@
   $shell = New-Object -ComObject WScript.Shell
   # Tab to the "Set defaults for applications".
   foreach ($i in 1..4) { $shell.SendKeys('{TAB}'); Start-Sleep -milliseconds 100 }
-  #
+  
   # Set Chrom as a defaults browser
-  #$shell.SendKeys("chrom"); Start-Sleep -seconds 1
-  #
+  $shell.SendKeys("chrom"); Start-Sleep -seconds 1
+  
   # Set Firefox as a defaults browser
   #$shell.SendKeys("firefox"); Start-Sleep -seconds 1
-  #
+  
   # Set EDGE as a defaults browser
-  $shell.SendKeys("edge"); Start-Sleep -seconds 1
-  #
+  #$shell.SendKeys("edge"); Start-Sleep -seconds 1
+  
   $shell.SendKeys('{TAB}'); Start-Sleep -milliseconds 100
   $shell.SendKeys('{ENTER}'); Start-Sleep -milliseconds 100
   $shell.SendKeys('{ENTER}'); Start-Sleep -milliseconds 100
