@@ -18,6 +18,7 @@ function Stop-Program {
 	[CmdletBinding()]
 	param()
 	$Host.UI.Write('Press any key to continue . . . ')#'Press Enter to continue...: '
+	<# https://learn.microsoft.com/dotnet/api/system.management.automation.host.readkeyoptions#fields #>
 	$Host.UI.RawUI.ReadKey(0b0110)|Out-Null
 	$Host.UI.WriteLine()
 }
