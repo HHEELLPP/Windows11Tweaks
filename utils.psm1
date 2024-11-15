@@ -23,11 +23,7 @@ function Stop-Program {
 	$Host.UI.WriteLine()
 }
 function Get-PowerShellEdition {
-	if($PSVersionTable.PSEdition -eq 'Core') {
-		'pwsh'
-	} else {
-		'PowerShell'
-	}
+	if($PSVersionTable.PSEdition -eq 'Core'){'pwsh'}else{'PowerShell'}
 }
 function Test-CommandExists {
 	[CmdletBinding()]
@@ -36,7 +32,7 @@ function Test-CommandExists {
 		[switch]$Invert
 	)
 	$oldPreference = $ErrorActionPreference
-	$ErrorActionPreference = ‘stop’
+	$ErrorActionPreference = 'stop'
 	try {
 		if(Get-Command $command) {
 			return -not $Invert
