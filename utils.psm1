@@ -15,10 +15,37 @@ function Get-FirstPath {
 	}
 }
 function Stop-Program {
+<<<<<<< HEAD
 	[CmdletBinding()]
 	param()
 	$Host.UI.Write('Press any key to continue . . . ')#'Press Enter to continue...: '
 	<# https://learn.microsoft.com/dotnet/api/system.management.automation.host.readkeyoptions#fields #>
 	$Host.UI.RawUI.ReadKey(0b0110)|Out-Null
 	$Host.UI.WriteLine()
+}
+function Get-PowerShellEdition {
+	if($PSVersionTable.PSEdition -eq 'Core') {
+		'pwsh'
+	} else {
+		'PowerShell'
+	}
+}
+function Test-CommandExists {
+	[CmdletBinding()]
+	param(
+		$command,
+		[switch]$Invert
+	)
+	$oldPreference = $ErrorActionPreference
+	$ErrorActionPreference = ‘stop’
+	try {
+		if(Get-Command $command) {
+			return -not $Invert
+		}
+	} catch {
+		Write-Host “$command does not exist”
+		return $Invert
+	} finally {
+		$ErrorActionPreference = $oldPreference
+	}
 }

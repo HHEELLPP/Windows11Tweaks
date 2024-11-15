@@ -1,4 +1,4 @@
-Invoke-Expression (Invoke-WebRequest (Invoke-WebRequest 'https://api.github.com/repos/HHEELLPP/Windows11Tweaks/contents/utils.psm1'|ConvertFrom-Json).download_url)
+Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/utils.psm1'|Invoke-Expression
 
 $UserId = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
@@ -247,7 +247,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sTimeFormat'=@{
-			'Value'='h:mm:ss tt'
+			'Value'='hh:mm:ss tt'
 			'PropertyType'='String'
 		}
 		'sList'=@{
@@ -275,7 +275,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sLongDate'=@{
-			'Value'='dddd, MMMM d, yyyy'
+			'Value'='yyyy MMMM d dddd'
 			'PropertyType'='String'
 		}
 		'sTime'=@{
@@ -323,7 +323,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sShortTime'=@{
-			'Value'='h:mm tt'
+			'Value'='hh:mm tt'
 			'PropertyType'='String'
 		}
 		'sDecimal'=@{
@@ -359,7 +359,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sNativeDigits'=@{
-			'Value'='abcdefghij'
+			'Value'='0123456789'
 			'PropertyType'='String'
 		}
 		'iTime'=@{
@@ -379,8 +379,6 @@ try {
 	}
 } finally {Start-Process explorer.exe}
 
-$a = Get-WmiObject Win32_OperatingSystem
-$a.Caption
-$a.OSArchitecture
+Get-CimInstance Win32_OperatingSystem | Select-Object -Property 'Caption','OSArchitecture' | Format-List
 
 Stop-Program
