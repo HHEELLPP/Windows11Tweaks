@@ -150,74 +150,72 @@
 		}
 	}
 	'HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM'=@{
-		'Composition'=@{
-			'Value'=1
-			'PropertyType'='DWord'
+		'iCalendarType'=@{
+			'Value'='1'
+			'PropertyType'='String'
 		}
-		'ColorizationColor'=@{
-			'Value'=-998293313
-			'PropertyType'='DWord'
+		'iCountry'=@{
+			'Value'='1'
+			'PropertyType'='String'
 		}
-		'ColorizationColorBalance'=@{
-			'Value'=89
-			'PropertyType'='DWord'
+		'iCurrDigits'=@{
+			'Value'='2'
+			'PropertyType'='String'
 		}
-		'ColorizationAfterglow'=@{
-			'Value'=-998293313
-			'PropertyType'='DWord'
+		'iCurrency'=@{
+			'Value'='0'
+			'PropertyType'='String'
 		}
-		'ColorizationAfterglowBalance'=@{
-			'Value'=10
-			'PropertyType'='DWord'
+		'iDate'=@{
+			'Value'='2'
+			'PropertyType'='String'
 		}
-		'ColorizationBlurBalance'=@{
-			'Value'=1
-			'PropertyType'='DWord'
+		'iDigits'=@{
+			'Value'='2'
+			'PropertyType'='String'
 		}
-		'EnableWindowColorization'=@{
-			'Value'=1
-			'PropertyType'='DWord'
+		'iFirstDayOfWeek'=@{
+			'Value'='0'
+			'PropertyType'='String'
 		}
-		'ColorizationGlassAttribute'=@{
-			'Value'=1
-			'PropertyType'='DWord'
+		'iFirstWeekOfYear'=@{
+			'Value'='0'
+			'PropertyType'='String'
 		}
-		'AccentColor'=@{
-			'Value'=-4243329
-			'PropertyType'='DWord'
+		'iLZero'=@{
+			'Value'='1'
+			'PropertyType'='String'
 		}
-		'ColorPrevalence'=@{
-			'Value'=0
-			'PropertyType'='DWord'
-		}
-		'EnableAeroPeek'=@{
-			'Value'=1
-			'PropertyType'='DWord'
-		}
-		'UseDpiScaling'=@{
-			'Value'=0
-			'PropertyType'='DWord'
-		}
-	}
-	"HKEY_USERS\$UserId\Control Panel\International"=@{
 		'iMeasure'=@{
 			'Value'='1'
 			'PropertyType'='String'
 		}
-		's1159'=@{
-			'Value'='AM'
-			'PropertyType'='String'
-		}
-		'sNegativeSign'=@{
-			'Value'='-'
-			'PropertyType'='String'
-		}
 		'iNegCurr'=@{
+			'Value'='1'
+			'PropertyType'='String'
+		}
+		'iNegNumber'=@{
+			'Value'='1'
+			'PropertyType'='String'
+		}
+		'iPaperSize'=@{
+			'Value'='1'
+			'PropertyType'='String'
+		}
+		'iTime'=@{
+			'Value'='1'
+			'PropertyType'='String'
+		}
+		'iTimePrefix'=@{
 			'Value'='0'
 			'PropertyType'='String'
 		}
-		'sGrouping'=@{
-			'Value'='3;0'
+		'iTLZero'=@{
+			'Value'='1'
+			'PropertyType'='String'
+		}
+		'Locale'=@{
+			'Value'='00000409'
 			'PropertyType'='String'
 		}
 		'LocaleName'=@{
@@ -228,136 +226,88 @@
 			'Value'='1'
 			'PropertyType'='String'
 		}
-		'sMonDecimalSep'=@{
-			'Value'='.'
-			'PropertyType'='String'
-		}
-		'iCalendarType'=@{
-			'Value'='1'
-			'PropertyType'='String'
-		}
-		'sDate'=@{
-			'Value'='-'
-			'PropertyType'='String'
-		}
-		'sTimeFormat'=@{
-			'Value'='hh:mm:ss tt'
-			'PropertyType'='String'
-		}
-		'sList'=@{
-			'Value'=','
+		's1159'=@{
+			'Value'='AM'
 			'PropertyType'='String'
 		}
 		's2359'=@{
 			'Value'='PM'
 			'PropertyType'='String'
 		}
-		'iFirstDayOfWeek'=@{
-			'Value'='0'
-			'PropertyType'='String'
-		}
-		'iDate'=@{
-			'Value'='2'
-			'PropertyType'='String'
-		}
-		'sLanguage'=@{
-			'Value'='ENU'
-			'PropertyType'='String'
-		}
-		'sShortDate'=@{
-			'Value'='yyyy-MM-dd'
-			'PropertyType'='String'
-		}
-		'sLongDate'=@{
-			'Value'='yyyy MMMM d dddd'
-			'PropertyType'='String'
-		}
-		'sTime'=@{
-			'Value'=':'
-			'PropertyType'='String'
-		}
-		'iPaperSize'=@{
-			'Value'='1'
-			'PropertyType'='String'
-		}
-		'iDigits'=@{
-			'Value'='2'
-			'PropertyType'='String'
-		}
-		'iCountry'=@{
-			'Value'='1'
-			'PropertyType'='String'
-		}
 		'sCurrency'=@{
 			'Value'='$'
 			'PropertyType'='String'
 		}
-		'sMonGrouping'=@{
-			'Value'='3;0'
-			'PropertyType'='String'
-		}
-		'iTLZero'=@{
-			'Value'='0'
-			'PropertyType'='String'
-		}
-		'sYearMonth'=@{
-			'Value'='MMMM yyyy'
-			'PropertyType'='String'
-		}
-		'iTimePrefix'=@{
-			'Value'='0'
-			'PropertyType'='String'
-		}
-		'sMonThousandSep'=@{
-			'Value'=','
-			'PropertyType'='String'
-		}
-		'iCurrDigits'=@{
-			'Value'='2'
-			'PropertyType'='String'
-		}
-		'sShortTime'=@{
-			'Value'='hh:mm tt'
+		'sDate'=@{
+			'Value'='-'
 			'PropertyType'='String'
 		}
 		'sDecimal'=@{
 			'Value'='.'
 			'PropertyType'='String'
 		}
-		'sThousand'=@{
+		'sGrouping'=@{
+			'Value'='3;0'
+			'PropertyType'='String'
+		}
+		'sLanguage'=@{
+			'Value'='ENU'
+			'PropertyType'='String'
+		}
+		'sList'=@{
 			'Value'=','
 			'PropertyType'='String'
 		}
-		'iCurrency'=@{
-			'Value'='0'
+		'sLongDate'=@{
+			'Value'='yyyy MMMM d dddd'
 			'PropertyType'='String'
 		}
-		'Locale'=@{
-			'Value'='00000409'
+		'sMonDecimalSep'=@{
+			'Value'='.'
 			'PropertyType'='String'
 		}
-		'iNegNumber'=@{
-			'Value'='1'
+		'sMonGrouping'=@{
+			'Value'='3;0'
 			'PropertyType'='String'
 		}
-		'iLZero'=@{
-			'Value'='1'
-			'PropertyType'='String'
-		}
-		'iFirstWeekOfYear'=@{
-			'Value'='0'
-			'PropertyType'='String'
-		}
-		'sPositiveSign'=@{
-			'Value'=''
+		'sMonThousandSep'=@{
+			'Value'=','
 			'PropertyType'='String'
 		}
 		'sNativeDigits'=@{
 			'Value'='0123456789'
 			'PropertyType'='String'
 		}
-		'iTime'=@{
-			'Value'='0'
+		'sNegativeSign'=@{
+			'Value'='-'
+			'PropertyType'='String'
+		}
+		'sPositiveSign'=@{
+			'Value'=''
+			'PropertyType'='String'
+		}
+		'sShortDate'=@{
+			'Value'='yyyy-MM-dd'
+			'PropertyType'='String'
+		}
+		'sShortTime'=@{
+			'Value'='HH:mm'
+			'PropertyType'='String'
+		}
+		'sThousand'=@{
+			'Value'=','
+			'PropertyType'='String'
+		}
+		'sTime'=@{
+			'Value'=':'
+			'PropertyType'='String'
+		}
+		'sTimeFormat'=@{
+			'Value'='HH:mm:ss'
+			'PropertyType'='String'
+		}
+		'sYearMonth'=@{
+			'Value'='MMMM yyyy'
 			'PropertyType'='String'
 		}
 	}
