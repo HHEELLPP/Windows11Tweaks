@@ -1,6 +1,5 @@
 Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/utils.psm1'|Invoke-Expression
 
-$UserId = [System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
 New-Item -Path 'U:\themes\wallpapers' -ItemType 'directory' -Force
 if((Test-Path -LiteralPath "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -PathType 'Leaf')-and((Test-Path -LiteralPath 'U:\themes\wallpapers\img19.jpg' -PathType 'Leaf')-ne$true)){Copy-Item -Path "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -Destination 'U:\themes\wallpapers\img19.jpg'}
@@ -205,7 +204,7 @@ $Result=@{
 			'PropertyType'='DWord'
 		}
 	}
-	"HKEY_USERS\$UserId\Control Panel\International"=@{
+	"HKEY_USERS\$([System.Security.Principal.WindowsIdentity]::GetCurrent().User.Value)\Control Panel\International"=@{
 		'iMeasure'=@{
 			'Value'='1'
 			'PropertyType'='String'
@@ -247,7 +246,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sTimeFormat'=@{
-			'Value'='hh:mm:ss tt'
+			'Value'='HH:mm:ss'
 			'PropertyType'='String'
 		}
 		'sList'=@{
@@ -323,7 +322,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sShortTime'=@{
-			'Value'='hh:mm tt'
+			'Value'='HH:mm'
 			'PropertyType'='String'
 		}
 		'sDecimal'=@{
