@@ -306,7 +306,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sYearMonth'=@{
-			'Value'='MMMM yyyy'
+			'Value'='yyyy MMMM'
 			'PropertyType'='String'
 		}
 		'iTimePrefix'=@{
