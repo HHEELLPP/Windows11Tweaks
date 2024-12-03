@@ -2,4 +2,4 @@ Invoke-Expression (Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP
 if(Test-CommandExists pwsh.exe -Invert) {
 	winget.exe install --id Microsoft.PowerShell --source winget --scope user --exact --accept-source-agreements --accept-package-agreements
 }
-Pause
+Stop-Program
