@@ -4,7 +4,9 @@ if(Test-CommandExists pwsh.exe -Invert) {
 	winget.exe install --id Microsoft.PowerShell --source winget --scope user --exact --accept-source-agreements --accept-package-agreements
 }
 
-pwsh -NoProfile -Command (Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1')
+if($PSVersionTable.PSEdition -neq 'Core') {
+	pwsh -NoProfile -Command (Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1')
+}
 
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
 New-Item -Path 'U:\themes\wallpapers' -ItemType 'directory' -Force
