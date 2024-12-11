@@ -7,7 +7,7 @@ if(Test-CommandExists pwsh.exe -Invert) {
 if($PSVersionTable.PSEdition -eq 'Core') {
 	continue
  } else {
-	pwsh.exe -c {Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1'|Invoke-Expression}
+	pwsh.exe -NoExit -c {Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1'|Invoke-Expression}
  	exit
 }
 
