@@ -5,7 +5,7 @@ if(Test-CommandExists pwsh.exe -Invert) {
 }
 
 if($PSVersionTable.PSEdition -neq 'Core') {
-	pwsh.exe -NoProfile -Command "& {$(Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1')}"
+	pwsh.exe -NoProfile -Command {Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1'|Invoke-Expression}
 }
 
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
