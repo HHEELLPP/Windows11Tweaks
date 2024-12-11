@@ -6,7 +6,7 @@ if(Test-CommandExists pwsh.exe -Invert) {
 
 if($PSVersionTable.PSEdition -ne 'Core') {
 	pwsh.exe -NoExit -c "Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1' | Invoke-Expression"
- 	exit 0
+ 	exit
 }
 
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
