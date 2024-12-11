@@ -6,10 +6,7 @@ if(Test-CommandExists pwsh.exe -Invert) {
 
 if($PSVersionTable.PSEdition -ne 'Core') {
 	'PowerShell'
-	$aaaa = {
-		Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.ps1' | Invoke-Expression
-	}
-	pwsh.exe -NoExit -Command $aaaa 
+	pwsh.exe -NoExit -Command (Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.ps1') 
  	exit
 } else {
 	'pwsh'
