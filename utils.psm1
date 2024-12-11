@@ -38,7 +38,7 @@ function Test-CommandExists {
 			return -not $Invert
 		}
 	} catch {
-		Write-Host “$command does not exist”
+		Write-Host "$command does not exist"
 		return $Invert
 	} finally {
 		$ErrorActionPreference = $oldPreference
