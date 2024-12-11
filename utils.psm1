@@ -23,7 +23,11 @@ function Stop-Program {
 	$Host.UI.WriteLine()
 }
 function Get-PowerShellEdition {
-	if($PSVersionTable.PSEdition -eq 'Core'){'pwsh'}else{'PowerShell'}
+	# if($PSVersionTable.PSEdition -eq 'Core'){'pwsh'}else{'PowerShell'}
+	switch($PSVersionTable.PSEdition) {
+		'Core' {'pwsh'}
+		default {'PowerShell'}
+	}
 }
 function Test-CommandExists {
 	[CmdletBinding()]
