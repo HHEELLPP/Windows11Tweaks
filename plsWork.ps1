@@ -4,7 +4,7 @@ if(Test-CommandExists pwsh.exe -Invert) {
 	winget.exe install --id Microsoft.PowerShell --source winget --scope user --exact --accept-source-agreements --accept-package-agreements
 }
 
-if(-not ($PSVersionTable.PSEdition -eq 'Core')) {
+if($PSVersionTable.PSEdition -neq 'Core') {
 	pwsh.exe -NoExit -c "Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.psm1' | Invoke-Expression"
  	exit 0
 }
