@@ -1,5 +1,14 @@
 Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/utils.psm1'|Invoke-Expression
 
+if(Test-CommandExists pwsh.exe -Invert) {
+	winget.exe install --id Microsoft.PowerShell --source winget --scope user --exact --accept-source-agreements --accept-package-agreements
+}
+
+if($PSVersionTable.PSEdition -ne 'Core') {
+	pwsh.exe -NoExit -Command {Invoke-WebRequest 'https://raw.githubusercontent.com/HHEELLPP/Windows11Tweaks/refs/heads/master/plsWork.ps1' | Invoke-Expression}
+	exit
+}
+
 New-Item -Path 'U:\themes' -ItemType 'directory' -Force
 New-Item -Path 'U:\themes\wallpapers' -ItemType 'directory' -Force
 if((Test-Path -LiteralPath "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -PathType 'Leaf')-and((Test-Path -LiteralPath 'U:\themes\wallpapers\img19.jpg' -PathType 'Leaf')-ne$true)){Copy-Item -Path "$env:SystemRoot\web\wallpaper\Windows\img19.jpg" -Destination 'U:\themes\wallpapers\img19.jpg'}
@@ -246,7 +255,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sTimeFormat'=@{
-			'Value'='hh:mm:ss tt'
+			'Value'='HH:mm:ss'
 			'PropertyType'='String'
 		}
 		'sList'=@{
@@ -306,7 +315,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sYearMonth'=@{
-			'Value'='MMMM yyyy'
+			'Value'='yyyy MMMM'
 			'PropertyType'='String'
 		}
 		'iTimePrefix'=@{
@@ -322,7 +331,7 @@ $Result=@{
 			'PropertyType'='String'
 		}
 		'sShortTime'=@{
-			'Value'='hh:mm tt'
+			'Value'='HH:mm'
 			'PropertyType'='String'
 		}
 		'sDecimal'=@{
